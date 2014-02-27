@@ -26,11 +26,8 @@ namespace HTTP_Server
 
             string message = sr.ReadLine();
             string answer = "Hello People!";
-            while (message != null && message != "")
-            {
-                sw.WriteLine(answer);
-                message = sr.ReadLine();
-            }
+          
+            sw.WriteLine(answer);
             connectionSocket.Close();
         }
         public string answer { get; set; }

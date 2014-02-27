@@ -18,15 +18,13 @@ namespace HTTP_Server
 
             serverSocket.Start();
 
-            while (true)
-            {
+          
                 Socket connectionSocket = serverSocket.AcceptSocket();
                 Console.WriteLine("Server now active.");
                 EchoService service = new EchoService(connectionSocket);
                 Thread myThread = new Thread(new ThreadStart(service.DoIt));
                 myThread.Start();
-            }
-            serverSocket.Stop();
+                serverSocket.Stop();
         }
     }
 }
