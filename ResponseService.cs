@@ -17,7 +17,7 @@ namespace HTTP_Server
             this.connectionSocket = connectionSocket;
         }
 
-        public void DoIt()
+        public void Respond()
         {
             Stream ns = new NetworkStream(connectionSocket);
             StreamReader sr = new StreamReader(ns);
@@ -26,14 +26,15 @@ namespace HTTP_Server
 
             string request = sr.ReadLine();
             string answer = "Hello People!";
-          
+            sw.WriteLine("HTTP/1.0 200 OK");
+            sw.WriteLine("Connection: close");
+            sw.WriteLine("Date: " + DateTime.Now);
+            sw.WriteLine("Server: Simple HTTP server, written in C#");
+            sw.WriteLine("Content-Typ: text/html");
+            sw.WriteLine("\r\n");
             sw.WriteLine(answer);
-            sw.WriteLine(request);
             string[] words = request.Split(' ');
-            foreach (string word in words)
-            {
-                Console.WriteLine(word);
-            }
+            sw.WriteLine("You've requested: " + words[1]);
             connectionSocket.Close();
         }
         public string answer { get; set; }
