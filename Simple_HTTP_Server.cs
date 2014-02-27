@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace HTTP_Server
 {
-    class Program
+    class SimpleHttpServer
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
