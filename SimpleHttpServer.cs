@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace HTTP_Server
@@ -21,7 +22,11 @@ namespace HTTP_Server
             {
                 Socket connectionSocket = serverSocket.AcceptSocket();
                 Console.WriteLine("Server now active.");
+                EchoService service = new EchoService(connectionSocket);
+                Thread myThread = new Thread(new ThreadStart(service.DoIt));
+                myThread.Start();
             }
+            serverSocket.Stop();
         }
     }
 }
