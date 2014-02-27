@@ -17,14 +17,15 @@ namespace HTTP_Server
             TcpListener serverSocket = new TcpListener(ip, 6789);
 
             serverSocket.Start();
-
-          
+            while (true)
+            {
                 Socket connectionSocket = serverSocket.AcceptSocket();
-                Console.WriteLine("Server now active.");
-                EchoService service = new EchoService(connectionSocket);
+                Console.WriteLine("Request received.");
+                ResponseService service = new ResponseService(connectionSocket);
                 Thread myThread = new Thread(new ThreadStart(service.DoIt));
                 myThread.Start();
-                serverSocket.Stop();
+            }
+            serverSocket.Stop();
         }
     }
 }

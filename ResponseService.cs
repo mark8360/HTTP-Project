@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace HTTP_Server
 {
-    class EchoService
+    class ResponseService
     {
         private Socket connectionSocket;
 
-        public EchoService(Socket connectionSocket)
+        public ResponseService(Socket connectionSocket)
         {
             this.connectionSocket = connectionSocket;
         }
@@ -24,10 +24,16 @@ namespace HTTP_Server
             StreamWriter sw = new StreamWriter(ns);
             sw.AutoFlush = true;
 
-            string message = sr.ReadLine();
+            string request = sr.ReadLine();
             string answer = "Hello People!";
           
             sw.WriteLine(answer);
+            sw.WriteLine(request);
+            string[] words = request.Split(' ');
+            foreach (string word in words)
+            {
+                Console.WriteLine(word);
+            }
             connectionSocket.Close();
         }
         public string answer { get; set; }
