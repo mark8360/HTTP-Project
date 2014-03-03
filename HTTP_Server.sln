@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTTP_Server", "HTTP_Server.csproj", "{D0842CE1-810A-4335-BF57-3786254A34F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpServerTest", "..\users\kasperg\documents\visual studio 2013\Projects\HttpServerTest\HttpServerTest.csproj", "{985B6958-9EB5-49B6-87C8-0CAC1CF0B000}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,10 @@ Global
 		{D0842CE1-810A-4335-BF57-3786254A34F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0842CE1-810A-4335-BF57-3786254A34F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0842CE1-810A-4335-BF57-3786254A34F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{985B6958-9EB5-49B6-87C8-0CAC1CF0B000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{985B6958-9EB5-49B6-87C8-0CAC1CF0B000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{985B6958-9EB5-49B6-87C8-0CAC1CF0B000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{985B6958-9EB5-49B6-87C8-0CAC1CF0B000}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
