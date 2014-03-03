@@ -2,6 +2,6 @@ C:\Users\Mark\Documents\Visual Studio 2013\Projects\Network\MyownNetworkProjects
 C:\HTTP-Project\bin\Debug\HTTP_Server.exe.config
 C:\HTTP-Project\bin\Debug\HTTP_Server.exe
 C:\HTTP-Project\bin\Debug\HTTP_Server.pdb
+C:\HTTP-Project\obj\Debug\HTTP_Server.csprojResolveAssemblyReference.cache
 C:\HTTP-Project\obj\Debug\HTTP_Server.exe
 C:\HTTP-Project\obj\Debug\HTTP_Server.pdb
-C:\HTTP-Project\obj\Debug\HTTP_Server.csprojResolveAssemblyReference.cache
